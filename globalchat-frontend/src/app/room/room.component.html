@@ -1,0 +1,39 @@
+<div class="room-container">
+  <header class="chat-header">
+    <h1>GlobalChat</h1>
+    <p>Logged in as: {{ username }}</p>
+  </header>
+
+  <div *ngIf="incomingCall" class="incoming-call-popup">
+    <p>{{ callerName }} is calling you...</p>
+    <button (click)="acceptCall()">Accept</button>
+    <button (click)="declineCall()">Decline</button>
+  </div>
+
+  
+<div class="chat-box" *ngIf="messages && messages.length > 0">
+  <div class="messages">
+    <div *ngFor="let msg of messages" class="message" [ngClass]="{ 'own-message': msg.user === username }">
+      <div class="message-header">
+        <strong>{{ msg.user }}</strong>
+        <button *ngIf="msg.user !== username" class="call-icon" (click)="callUser(msg.user)" title="Video call {{ msg.user }}">
+          📞
+        </button>
+      </div>
+      {{ msg.text }}
+    </div>
+  </div>
+</div>
+
+<!-- Optional fallback when no messages -->
+<div class="chat-box" *ngIf="messages && messages.length === 0">
+  <p class="no-messages">No messages yet. Start the conversation!</p>
+</div>
+
+
+
+  <div class="input-area">
+    <textarea placeholder="Type a message..." [(ngModel)]="newMessage" (keydown)="handleKeyDown($event)" class="message-input" rows="2"></textarea>
+    <button (click)="sendMessage()" class="send-button">Send</button>
+  </div>
+</div>

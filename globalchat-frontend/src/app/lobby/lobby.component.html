@@ -1,0 +1,16 @@
+<div class="lobby-container">
+    <div class="welcome-banner">
+      <h1>Welcome to GlobalChat</h1>
+      <p>Connect and chat with people in real-time!</p>
+    </div>
+    <div class="form-container">
+      <input 
+        type="text" 
+        placeholder="Enter your username" 
+        [(ngModel)]="username"
+        class="username-input"
+      />
+      <button (click)="joinRoom()" class="go-button">Join Chat</button>
+    </div>
+  </div>
+  

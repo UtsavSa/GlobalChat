@@ -1,0 +1,89 @@
+.video-room-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3c72;
+  color: white;
+  padding: 10px 20px;
+}
+
+.end-call-btn {
+  background: red;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  flex: 2;
+  gap: 20px;
+  padding: 20px;
+}
+
+video {
+  width: 45%;
+  border-radius: 10px;
+  background: #222;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #e3eaf2;
+}
+
+.private-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.private-message {
+  padding: 8px;
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.own-message {
+  align-self: flex-end;
+  background: #00c853;
+  color: white;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.chat-input-area button {
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  cursor: pointer;
+}

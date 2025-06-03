@@ -1,0 +1,47 @@
+<!-- <div class="video-room-container">
+  <header class="video-header">
+    <h2>Video Chat</h2>
+    <button class="end-call-btn" (click)="endCall()">End Call</button>
+  </header>
+
+  <div class="video-section">
+    <video #localVideo autoplay muted></video>
+    <video #remoteVideo autoplay></video>
+  </div>
+
+  <div class="chat-section">
+    <div class="private-messages">
+      <div 
+        *ngFor="let msg of messages"
+        class="private-message"
+        [ngClass]="{ 'own-message': msg.user === username }"
+      >
+        <strong>{{ msg.user }}:</strong> {{ msg.text }}
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input
+        type="text"
+        [(ngModel)]="newMessage"
+        placeholder="Type a private message..."
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="video-room-container">
+  <!-- Header -->
+  <header class="video-header">
+    <h2>Video Chat</h2>
+    <p class="participants">{{ caller }} is calling {{ callee }}</p>
+    <button class="end-call-btn" (click)="endCall()">End Call</button>
+  </header>
+
+  <!-- Video section -->
+  <div class="video-section">
+    <video #localVideo autoplay muted></video>
+    <video #remoteVideo autoplay></video>
+  </div>
+</div>

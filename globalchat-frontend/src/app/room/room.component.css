@@ -1,0 +1,141 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.room-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f0f4f8;
+}
+
+.chat-header {
+  background: #1e3c72;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px 20px;
+  overflow-y: auto;
+  background: #e3eaf2;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 15px;
+  background: white;
+  border-radius: 12px;
+  max-width: 70%;
+  word-wrap: break-word;
+  align-self: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.own-message {
+  background: #00c853;
+  color: white;
+  align-self: flex-end;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.call-icon {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #1e3c72;
+  transition: color 0.3s;
+}
+
+.call-icon:hover {
+  color: #00c853;
+}
+
+.input-area {
+  display: flex;
+  padding: 15px 20px;
+  background: #f5f7fa;
+  border-top: 1px solid #ddd;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.send-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background: #00c853;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background: #00e676;
+}
+
+.incoming-call-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 16px;
+  border: 2px solid #1e3c72;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.incoming-call-popup button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.incoming-call-popup button:first-child {
+  background-color: #00c853;
+  color: white;
+}
+
+.incoming-call-popup button:last-child {
+  background-color: #f44336;
+  color: white;
+} 
